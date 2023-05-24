@@ -327,7 +327,7 @@ func metrics(w http.ResponseWriter, r *http.Request) {
 		}
 		cmd = exec.Command("/bin/cat", dir+"/nvidia-smi.sample.xml")
 	} else {
-		cmd = exec.Command(NVIDIA_SMI_PATH, "-q", "-x")
+		cmd = exec.Command("/bin/python3", "meow.py")
 	}
 
 	// Execute system command
